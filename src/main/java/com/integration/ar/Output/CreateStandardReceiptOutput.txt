@@ -1,0 +1,57 @@
+// https://ejds-test.fa.em2.oraclecloud.com:443/fscmService/StandardReceiptService
+// use netbeans for payload String
+
+// <soapenv:Envelope xmlns:com="http://xmlns.oracle.com/apps/financials/receivables/receipts/shared/standardReceiptService/commonService/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:stan="http://xmlns.oracle.com/apps/financials/receivables/receipts/shared/model/flex/StandardReceiptDff/" xmlns:stan1="http://xmlns.oracle.com/apps/financials/receivables/receipts/shared/model/flex/StandardReceiptGdf/" xmlns:typ="http://xmlns.oracle.com/apps/financials/receivables/receipts/shared/standardReceiptService/commonService/types/">
+//    <soapenv:Header>
+//       <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+//          <wsse:UsernameToken wsu:Id="UsernameToken-9B9EFFA9ECC1CA21A616254036475202">
+//             <wsse:Username>PRISM@omniyat.com</wsse:Username>
+//             <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">0mniy@t123</wsse:Password>
+//             <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">gGz12EPTL044YTT/Ad+vXA==</wsse:Nonce>
+//             <wsu:Created>2021-07-05T06:25:45.000Z</wsu:Created>
+//          </wsse:UsernameToken>
+//          <wsu:Timestamp wsu:Id="TS-9B9EFFA9ECC1CA21A616254036365611">
+//             <wsu:Created>2021-07-05T06:25:45.000Z</wsu:Created>
+//             <wsu:Expires>2021-07-05T06:27:45.000Z</wsu:Expires>
+//          </wsu:Timestamp>
+//       </wsse:Security>
+//    </soapenv:Header>
+//    <soapenv:Body>
+//       <typ:createStandardReceipt>
+//          <typ:standardReceipt>
+//             <com:Amount currencyCode="AED">1200</com:Amount>
+//             <com:GlDate>2021-05-27T16:58:45.000+00:00</com:GlDate>
+//             <com:MaturityDate>2021-05-27T16:58:45.000+00:00</com:MaturityDate>
+//             <com:OrgId>300000002522710</com:OrgId>
+//             <com:CustomerId>100000005111649</com:CustomerId>
+//             <com:ReceiptDate>2021-05-27T16:58:45.000+00:00</com:ReceiptDate>
+//             <com:ReceiptMethodId>300000002556119</com:ReceiptMethodId>
+//             <com:ReceiptNumber>RT-0311</com:ReceiptNumber>
+//             <com:RemittanceBankAccountId>300000002552144</com:RemittanceBankAccountId>
+//          </typ:standardReceipt>
+//       </typ:createStandardReceipt>
+//    </soapenv:Body>
+// </soapenv:Envelope>
+*************************
+// http://localhost:8081/receipt/createStandardReceipt
+// {
+//     "amount": "100",
+//     "glDate": "2021-05-27T16:58:45.000+00:00",
+//     "maturityDate": "2021-05-27T16:58:45.000+00:00",
+//     "orgId": "300000002522710",
+//     "customerId": "100000005111649",
+//     "receiptDate": "2021-05-27T16:58:45.000+00:00",
+//     "receiptMethodId": "300000002556119",
+//     "receiptNumber": "RT-0711",
+//     "remittanceBankAccountId": "300000002552144",
+//     "environment": "test",
+//     "currencyCode": "AED"
+// }
+
+// {
+//     "faultstring": null,
+//     "faultcode": null,
+//     "cashReceiptId": "252003",
+//     "orgId": "300000002522710",
+//     "responseCode": 200
+// }

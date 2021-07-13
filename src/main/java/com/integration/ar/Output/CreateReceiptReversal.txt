@@ -1,0 +1,25 @@
+// https://ejds-test.fa.em2.oraclecloud.com:443/fscmService/StandardReceiptService
+// use netbeans for payload String
+
+
+*********************************************************
+localhost:8081/ar/receipt/createReverseReceipt
+{
+    "environment":"test",
+    "receiptNumber":"RT-0611",
+    "reversalCategory":"REV",
+    "reversalDate":"2021-05-27",
+    "reversalComments":"Wrong amount",
+    "businessUnit":"Maritime Residence Ltd BU",
+    "reversalGlDate":"2021-05-27",
+    "reversalReasonName":"Wrong amount"
+}
+--------------------------------------------
+{
+    "faultstring": null,
+    "faultcode": null,
+    "reversalCategory": "REV",
+    "receiptNumber": "RT-0611",
+    "responseCode": 200
+}
+--------------------------------------------
